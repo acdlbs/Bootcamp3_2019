@@ -24,8 +24,8 @@ var listingSchema = new Schema({
 */
 listingSchema.pre("save", function(next) {
   //get current date
-  if (this.name == null) throw "[DB] name not provided";
-  if (this.code == null) throw "[DB] code not provided";
+  if (this.name == null) throw "no db name provided";
+  if (this.code == null) throw "no db code provided";
   var currentDate = new Date();
 
   //change update_at field to current date
